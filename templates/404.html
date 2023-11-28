@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="content-container">
+    <div class="wrapper-not-found">
+        <p style="font-weight:bold;font-size: 72px;">404</p>
+        <p>Ooups! Pumpkin not found ʕ •ᴥ•ʔ </p>
+        <p> Return to
+            <a href="{{ url_for('index') }}"> Home Page</a>.
+        </p>
+    </div>
+</section>
+{% endblock %}

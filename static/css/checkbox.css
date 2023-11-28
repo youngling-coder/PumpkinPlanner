@@ -1,0 +1,55 @@
+.container {
+    display: block;
+    position: relative;
+    padding-left: 4.35vmin;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 1vmin;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #772f1a;
+    box-shadow: 0 0 2vmin rgba(0, 0, 0, .3);
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3vmin;
+    width: 3vmin;
+    border-radius: 1vmin;
+    background-color: #dda15e;
+    margin-bottom: 2vmin;
+    transition: all .5s ease;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 1.1vmin;
+    top: .55vmin;
+    width: .7vmin;
+    height: 1.4vmin;
+    border: solid #fefae0;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

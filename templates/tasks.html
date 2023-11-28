@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="content-container tasks-container">
+    <div class="tasks-wrapper">
+        <header>Your Tasks</header>
+        <form class="task" method="POST">
+            <input type="text" class="text-edit" name="title" maxlength="40" placeholder="Enter title...">
+            <textarea class="text-edit" name="description" maxlength="140" placeholder="Enter description..."></textarea>
+            <input type="submit" class="submit-button" value="Add task">
+        </form>
+        {% for task in tasks %}
+            <div class="task">
+                <a href="{{ url_for('task', title=task['title']) }}"><header class="task-header">{{ task["title"] }}</header></a>
+                <hr>
+                <div class="description-wrapper">
+                    <p class="description">{{ task["description"] }}</p>
+                    <div class="control-panel">
+                        <a class="button" href="{{ url_for('remove', id_=task['id']) }}">Done</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

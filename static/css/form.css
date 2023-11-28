@@ -1,0 +1,23 @@
+form, .profile-wrapper {
+    width: 25vw;
+    padding: 2vmin;
+    background-color: #bc6c25;
+    border-radius: 1vmin;
+    box-shadow: 0 0 4vmin rgba(0, 0, 0, .3);
+}
+
+form label {
+    margin-bottom: 2vmin;
+}
+
+form input, form textarea {
+    resize: none;
+    border-radius: 1vmin;
+    box-shadow: 0 0 2vmin rgba(0, 0, 0, .3);
+    background: #dda15e;
+    width: 100%;
+    padding: 1vmin;
+    margin-bottom: 2vmin;
+    box-sizing: border-box;
+    outline-style: none;
+}

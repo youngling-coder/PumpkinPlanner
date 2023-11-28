@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('base.css');
+@import url('task.css');
+@import url('checkbox.css');
+@import url('button.css');
+@import url('form.css');
+
+a {
+    text-decoration: none;
+}
+a.button.logout {
+    background-color: #bc6c25;
+}
+
+hr {
+    height: 1px;
+    background-color: #dda15e;
+    margin: 0;
+    margin-bottom: 2vmin;
+}
+
+header {
+    margin-bottom: 2vmin;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.2vmin;
+}
+
+.task-header {
+    margin-bottom: 2vmin;
+}
+
+.username-header {
+    margin-bottom: 0;
+    text-align: left;
+    margin-left: 2vmin;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 83vh;
+}
+
+.profile-header, .wrapper-not-found{
+    display: flex;
+    align-items: center;
+    background-color: #772f1a;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    border-radius: 1vmin;
+    padding: 2vmin;
+}
+
+.wrapper-not-found {
+    width: 30vw;
+    height: 30vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-header img {
+    width: 6vmin;
+    height: 6vmin;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-wrapper {
+    width: 70vw;
+    height: 70vh;
+    padding: 2vmin;
+}
+
+.flash {
+    margin-bottom: 2vmin;
+}
+
+.task:hover {
+    box-shadow: 0 0 2vmin rgba(0, 0, 0, .5);
+}
+
+.tasks-container .task .description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.control-panel {
+    display: flex;
+}
+
+.tasks-wrapper {
+    display: flex;
+    align-items: center;
+    max-height: 60vh;
+    overflow-y: scroll;
+    flex-direction: column;
+    background-color: #bc6c25;
+    box-shadow: 0 0 2vmin rgba(0, 0, 0, .3);
+    border-radius: 1vmin;
+    padding: 2vmin;
+    width: 40vw;
+}
+
+form button:hover, .logout-button:hover {
+    color: #dda15e;
+}
+
+.control-panel .container {
+    margin-left: 4vmin;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="content-container">
+    <div class="task">
+        <header class="task-header">{{ title }}</header>
+                <hr>
+                <div class="description-wrapper">
+                    <p class="description">{{ description }}</p>
+                    <div class="control-panel">
+                        <label class="container">
+                            <input type="checkbox" name="remember-me">
+                            <span class="checkmark"></span>
+                        </label>
+                        <a class="button" href="">Delete</a>
+                    </div>
+                </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="content-container">
+    <div class="profile-wrapper">
+        <div class="profile-header">
+                <img src="{{ url_for('static', filename='img/test_profile.png') }}">
+                <header class="username-header">@{{ username }}</header>
+
+            <div class="logout-wrapper">
+                <a href="{{ url_for('logout') }}" class="button logout">Log Out</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

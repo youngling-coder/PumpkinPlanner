@@ -1,0 +1,10 @@
+.task {
+    background-color: #772f1a;
+    border: none;
+    padding: 2vmin;
+    width: 90%;
+    margin-top: 2vmin;
+    border-radius: 1vmin;
+    transition: all .5s ease-in;
+    box-shadow: 0 0 2vmin rgba(0, 0, 0, .3);
+}
