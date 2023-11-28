@@ -11,6 +11,10 @@ a.button, button {
     box-shadow: 0 0 2vmin rgba(0, 0, 0, .3);
 }
 
+a.button.logout, .button {
+    background-color: #bc6c25;
+}
+
 button {
     margin-bottom: 2vmin;
 }

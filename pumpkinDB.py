@@ -41,7 +41,7 @@ class PumpkinDB:
             if not res:
                 return (False, f"You don't have any tasks, {username}")
 
-            return res
+            return (True, res)
 
         except sqlite3.Error as e:
             print(f"Error while receiving user tasks:\n{e}")

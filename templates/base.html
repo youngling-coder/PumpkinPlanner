@@ -14,12 +14,10 @@
 </head>
 <body>
     <nav>
-
         <a href="{{ url_for('index') }}">
             <img class="logo" src="{{ url_for('static', filename='img/icons8-pumpkin-96.png') }}">
         </a>
         <div style="width: 100%;"></div>
-        <a href="{{ url_for('tasks') }}">Tasks</a>
         <a href="{{ url_for('profile', username=username) }}">
             Profile
         </a>

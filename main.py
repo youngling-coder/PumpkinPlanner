@@ -120,27 +120,29 @@ def remove(id_):
     taskEx = dbase.removeTask(id=id_)
     if dbase.removeTask(id=id_):
         tasks = dbase.getTasks(username=current_user.get_username())
-    return render_template("tasks.html", tasks=tasks, title="Tasks")
+    if not tasks[0]:
+        return render_template("profile.html", tasks=False, username=current_user.get_username(), title=current_user.get_username())
+    else:
+        return render_template("profile.html", tasks=tasks[1], username=current_user.get_username(), title=current_user.get_username())
 
 
-# Show tasks page
-@app.route("/tasks", methods=["GET", "POST"])
+# Show profile page
+@app.route("/profile", methods=["GET", "POST"])
 @login_required
-def tasks():
+def profile():
     tasks = dbase.getTasks(username=current_user.get_username())
     if request.method == "POST":
         user = current_user.get_username()
         title = request.form["title"].lstrip()
         description = request.form["description"].lstrip()
         if title and description:
+            dbase.addTask(title=title, description=description, username=user)
             tasks = dbase.getTasks(username=current_user.get_username())
-    return render_template("tasks.html", tasks=tasks, title="Tasks")
 
-# Show profile page
-@app.route("/profile")
-@login_required
-def profile():
-    return render_template("profile.html", username=current_user.get_username(), title=current_user.get_username())
+    if not tasks[0]:
+        return render_template("profile.html", tasks=False, username=current_user.get_username(), title=current_user.get_username())
+    else:
+        return render_template("profile.html", tasks=tasks[1], username=current_user.get_username(), title=current_user.get_username())
 
 # Sign up process handler
 @app.route("/signup", methods=["GET", "POST"])
